@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container, Section, Text, SuperHeading } from "./ui"
 import * as styles from "./about-hero.css"
+import moment from 'moment';
 
 export default function AboutHero(props) {
   return (
@@ -10,6 +11,7 @@ export default function AboutHero(props) {
       <Container>
         <SuperHeading className={styles.aboutHeroHeader}>
           {props.heading}
+          {}
         </SuperHeading>
         {props.text && (
           <Text className={styles.aboutHeroText}>{props.text}</Text>

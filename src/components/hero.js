@@ -12,8 +12,11 @@ import {
   Subhead,
   Text,
 } from "./ui"
+import moment from 'moment';
 
 export default function Hero(props) {
+  const time = moment().format('h:mm a')
+
   return (
     <Section>
       <Container>
@@ -29,9 +32,11 @@ export default function Hero(props) {
           <Box width="half">
             <Heading as="h1">
               {props.kicker && <Kicker>{props.kicker}</Kicker>}
-              {props.h1}
             </Heading>
-            <Subhead as="h2">{props.subhead}</Subhead>
+            <Heading as="h3">
+            Dude, it's {time}...
+            </Heading>
+            <Subhead as="h1">{props.h1}</Subhead>
             <Text as="p">{props.text}</Text>
             <ButtonList links={props.links} />
           </Box>
