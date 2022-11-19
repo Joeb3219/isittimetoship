@@ -1,6 +1,10 @@
 import * as React from "react"
 
-export default function GatsbyContentfulLogo() {
+export default function Logo() {
+  return <span style={{ fontSize: 36 }}>🚢⏰⁉️</span>
+}
+
+function GatsbyContentfulLogo() {
   return (
     <svg
       width="82"
