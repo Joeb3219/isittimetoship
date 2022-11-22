@@ -15,7 +15,10 @@ import {
 import moment from 'moment';
 
 export default function Hero(props) {
-  const time = moment().format('h:mm a')
+  const [isLoaded, setIsLoaded] = React.useState(false);
+  const time = moment().format('h:mm a');
+  
+  useEffect(() => setIsLoaded(true), []);
 
   return (
     <Section>
@@ -34,7 +37,7 @@ export default function Hero(props) {
               {props.kicker && <Kicker>{props.kicker}</Kicker>}
             </Heading>
             <Heading as="h3">
-            Dude, it's {time}...
+              {isLoaded ? `Dude, it's ${time}...` : `Dude...`}
             </Heading>
             <Subhead as="h1">{props.h1}</Subhead>
             <Text as="p">{props.text}</Text>
