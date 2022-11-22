@@ -18,7 +18,7 @@ export default function Hero(props) {
   const [isLoaded, setIsLoaded] = React.useState(false);
   const time = moment().format('h:mm a');
   
-  useEffect(() => setIsLoaded(true), []);
+  React.useEffect(() => setIsLoaded(true), []);
 
   return (
     <Section>
